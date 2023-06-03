@@ -1,0 +1,106 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <script src="./angular-1.8.2/angular-1.8.2/angular.min.js"></script>
+    <script src="./angular-1.8.2/angular-1.8.2/angular-route.js"></script>
+
+    
+</head>
+<body ng-app="myApp">
+    <div class="header">
+      <img src="./Image/logo.png">
+    </div>
+    <hr>
+    <!--sidebar-->
+     <div class="sidebar">
+        <div class="items">
+            <ul>
+                <li>
+                    <a href="#!i">Graphical presentation of houses </a>
+                </li>
+                <li>
+                    <a href="#!second">Graphical presentation of mines </a>
+                </li>
+                <li >
+                    <a href="#!pageii">Graphical presentation of food </a>
+                </li>
+                <li>
+                    <a href="#!index">Graphical presentation of cars </a>
+                </li>
+                <li>
+                    <a href="#!pagei">Graphical presentation of stock Market </a>
+                </li>
+                <li class="dropdown">
+                    <p class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    More Graphical contents
+                    </p>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#!pageiii">Join our Movement</a></li>
+                        <li><a class="dropdown-item" href="#!index">Make your Donation</a></li>
+                        <li><a class="dropdown-item" href="#!Sermons & Bible Study">Sermons & Bible Study</a></li>
+                        <li><a class="dropdown-item" href="#!Gallery">Gallery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="view" ng-view>
+
+        </div>
+      
+    </div>
+    
+    <script>
+        const app = angular.module("myApp", ["ngRoute"]);
+    
+        app.config(function($routeProvider) {
+            $routeProvider
+            .when("/!i", {
+                templateUrl : "webpages/pagei.html"
+            })
+            .when("/second", {
+                templateUrl : "webpages/second.html"
+            })
+            .when("/index", {
+                templateUrl : "webpages/index.html"
+            })
+            .when("/pagei", {
+                templateUrl : "webpages/pagei.html"
+            })
+            .when("/pageii", {
+                templateUrl : "webpages/pageii.html"
+            }) 
+            .when("/pageiii", {
+                templateUrl : "webpages/pageiii.html"
+            }) 
+       
+        });
+     //  app.config(function ($routeProvider) {
+       //     $routeProvider
+       //         .when("/", {
+       //             template: `
+    //
+       //             <img class="bg-img" src="./image/us.JPG" alt="family" style="width:100%;">                
+       //                 `
+       //         })
+       //         .when("/About", {
+       //             template: `
+       //             <img class="bg-img" src="Image/logo.png" alt="family" style="width:100%;">
+       //             `
+       //         })
+       //         .when("/mine", {
+       //             template: `
+       //             <p>Things that matter</p>
+       //             `
+       //         });
+       //     });
+    </script>
+</body>
+
+</html>

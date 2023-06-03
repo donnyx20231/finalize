@@ -1,0 +1,28 @@
+.sidebar{
+    display: flex;
+    padding-left: 20px;
+}
+.items{
+    background:rgb(159, 76, 159);
+    height: 100vh;
+    padding: 20px;
+
+}
+p.dropdown-toggle{
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+.dropdown-menu{
+    display:none;
+}
+.view{
+    width: 80%;
+    background: rgb(124, 124, 177);
+    padding-left: 40px;
+}
